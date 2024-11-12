@@ -1,0 +1,7 @@
+<p-dialog 
+  [(visible)]="visible" 
+  [header]="header" 
+  [styleClass]="styleClass" 
+  (onHide)="closeDialog()">
+  <ng-content></ng-content> <!-- Dialog content goes here -->
+</p-dialog>
