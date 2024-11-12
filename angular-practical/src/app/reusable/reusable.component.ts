@@ -5,11 +5,12 @@ import { UiInputTextComponent } from "../ui-input-text/ui-input-text.component";
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DialogModule } from 'primeng/dialog';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-reusable',
   standalone: true,
-  imports: [UiButtonComponent, UiDialogComponent, UiInputTextComponent, DialogModule],
+  imports: [UiButtonComponent, UiDialogComponent, UiInputTextComponent, DialogModule, CardModule],
   templateUrl: './reusable.component.html',
   styleUrl: './reusable.component.css'
 })

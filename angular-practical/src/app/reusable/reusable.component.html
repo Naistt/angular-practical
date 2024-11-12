@@ -1,23 +1,25 @@
-<br><br><!-- Reusable Button -->
-<app-ui-button 
-  label="Open Dialog" 
-  styleClass="p-button-primary" 
-  (onClick)="onButtonClick()">
-</app-ui-button>
-<hr>
+<p-card header="Reusable UI components">
+    <br><br><!-- Reusable Button -->
+    <app-ui-button 
+    label="Open Dialog" 
+    styleClass="p-button-primary" 
+    (onClick)="onButtonClick()">
+    </app-ui-button>
+    <hr>
 
-<!-- Reusable Input -->
-<p>Just type some text:</p>
-<app-ui-input-text 
-  [(value)]="inputValue" 
-  placeholder="Enter text" 
-  (valueChange)="onInputChange($event)">
-</app-ui-input-text><br>
+    <!-- Reusable Input -->
+    <p>Just type some text:</p>
+    <app-ui-input-text 
+    [(value)]="inputValue" 
+    placeholder="Enter text" 
+    (valueChange)="onInputChange($event)">
+    </app-ui-input-text><br>
 
-<!-- Reusable Dialog -->
-<app-ui-dialog 
-  [visible]="dialogVisible" 
-  header="Dialog Header" 
-  (onClose)="onDialogClose()">
-  <p>Here is the content of the dialog!</p>
-</app-ui-dialog>
+    <!-- Reusable Dialog -->
+    <app-ui-dialog 
+    [visible]="dialogVisible" 
+    header="Dialog Header" 
+    (onClose)="onDialogClose()">
+    <p>Here is the content of the dialog!</p>
+    </app-ui-dialog>
+</p-card>

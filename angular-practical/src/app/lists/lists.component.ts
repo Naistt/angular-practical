@@ -6,6 +6,7 @@ import { City } from '../../model/city.model';
 import { ButtonModule } from 'primeng/button';
 import { FloatLabelModule } from 'primeng/floatlabel';
 import { ListboxModule } from 'primeng/listbox';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'app-lists',
@@ -15,7 +16,8 @@ import { ListboxModule } from 'primeng/listbox';
     FormsModule,
     ButtonModule,
     FloatLabelModule,
-    ListboxModule
+    ListboxModule,
+    CardModule
   ],
   templateUrl: './lists.component.html',
   styleUrl: './lists.component.css',

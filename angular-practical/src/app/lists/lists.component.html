@@ -1,45 +1,46 @@
-<hr>
-<h3>Dynamic list (ref. Task 2)</h3>
-<br>
-<p-floatLabel>
-    <input pInputText id="username" [(ngModel)]="newItem" />
-    <label for="Insert a new item">Insert a new item</label>
-</p-floatLabel><br>
-<p-button 
-    label="Add" 
-    (onClick)="addItem()"
-    size="small" />
-    
-<div *ngIf="items && items.length > 0">
-    <ul>
-        <li *ngFor="let item of items; let i = index">
-            {{ item }}
-            <p-button
-                icon="pi pi-times"
-                [rounded]="true"
-                severity="danger"
-                (onClick)="removeItem(i)"
-                size="small"/>
-        </li>
-    </ul>
-</div>
+<p-card header="Generic Lists">
+    <h3>Dynamic list (ref. Task 2)</h3>
+    <br>
+    <p-floatLabel>
+        <input pInputText id="username" [(ngModel)]="newItem" />
+        <label for="Insert a new item">Insert a new item</label>
+    </p-floatLabel><br>
+    <p-button 
+        label="Add" 
+        (onClick)="addItem()"
+        size="small" />
+        
+    <div *ngIf="items && items.length > 0">
+        <ul>
+            <li *ngFor="let item of items; let i = index">
+                {{ item }}
+                <p-button
+                    icon="pi pi-times"
+                    [rounded]="true"
+                    severity="danger"
+                    (onClick)="removeItem(i)"
+                    size="small"/>
+            </li>
+        </ul>
+    </div>
 
-<div *ngIf="items.length == 0">
-    <p>Empty list.</p>
-</div>
+    <div *ngIf="items.length == 0">
+        <p>Empty list.</p>
+    </div>
 
 
 
-<hr>
-<h3>Mock API list (ref. Task 3)</h3>
+    <hr>
+    <h3>Mock API list (ref. Task 3)</h3>
 
-<p-listbox 
-    [options]="cities" 
-    optionLabel="name" 
-    [filter]="true" 
-    [style]="{ width: '15rem' }" 
-    [listStyle]="{'max-height': '220px'}" />
+    <p-listbox 
+        [options]="cities" 
+        optionLabel="name" 
+        [filter]="true" 
+        [style]="{ width: '15rem' }" 
+        [listStyle]="{'max-height': '220px'}" />
 
-<div *ngIf="cities.length == 0">
-    <p>Empty list.</p>
-</div>
+    <div *ngIf="cities.length == 0">
+        <p>Empty list.</p>
+    </div>
+</p-card>
